@@ -13130,7 +13130,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1 align="center">Analisi della qualità del vino Vinho Verde</h1></p>
-<p><div align="center"><b>Stefano Brilli - Marzo 2019</b></div></p>
+<p><div align="center"><b>Stefano Brilli - Aprile 2019</b></div></p>
 <p><hr><hr></p>
 
 </div>
@@ -13180,10 +13180,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In questo report saranno analizzati dati riguardanti il vino portoghese <b>Vinho Verde</b> nella sua variante rossa con l'obiettivo di capire di predire se, in base alle sue caratteristiche, si stia osservando un vino di bassa o alta qualità. Il dataset utilizzato è reperibile all'indirizzo <a href="http://archive.ics.uci.edu/ml/datasets/Wine+Quality">http://archive.ics.uci.edu/ml/datasets/Wine+Quality</a> <a id="ref-1" href="#cite-database_cit">[1]</a>.
-Al fine di costruire un classificatore binario, il dataset è stato modificato per rendere la variabile di output <b>(quality)</b> una quantità binaria. In particolare le osservazioni aventi un output minore od uguale a 6 sono state etichettate con il <b>valore 0 (bassa qualità)</b> mentre quelle avente un valore qualitativo di 7 o superiore sono state etichettate con il <b>valore 1 (alta qualità)</b>.<br>
-È chiaro come una mappatura di questo tipo ponga sia i vini con punteggio 6 sia quelli con punteggio 10 allo stesso livello nella categoria dei vini di alta qualità, ma un modello come questo potrebbe permettere ai produttori di avere un iniziale responso della qualità del proprio vino, scartando in prima battuta quelli classificati come di bassa qualità ed andando successivamente ad analizzare nel dettaglio i restanti vini al fine di determinare una scala delle qualità.<br>
-I valori di input sono stati calcolati per mezzo di test fisico-chimici, mentre l'output è stato determinato tramite analisi sensoristiche.
+<p>In questo report saranno analizzati dati riguardanti il vino portoghese <b>Vinho Verde</b> nella sua variante rossa con l'obiettivo di predirne la qualità. Il dataset utilizzato è reperibile all'indirizzo <a href="http://archive.ics.uci.edu/ml/datasets/Wine+Quality">http://archive.ics.uci.edu/ml/datasets/Wine+Quality</a> <a id="ref-1" href="#cite-database_cit">[1]</a>.<br>
+Al fine di costruire un classificatore binario il dataset è stato modificato per rendere binaria la variabile di output: le osservazioni aventi un output minore od uguale a 6 sono state etichettate con il <b>valore 0 (bassa qualità)</b> mentre quelle aventi un valore qualitativo di 7 o superiore sono state etichettate con il <b>valore 1 (alta qualità)</b>.<br>
+È chiaro come una mappatura di questo tipo ponga sia i vini con punteggio 6 sia quelli con punteggio 10 allo stesso livello nella categoria di quelli di alta qualità, ma un modello come questo potrebbe permettere ai produttori di avere un iniziale responso sulla qualità del proprio vino, scartando in prima battuta quelli classificati come di bassa qualità ed andando successivamente ad analizzare nel dettaglio i restanti al fine di determinare una scala delle qualità.<br>
+I valori di input sono stati calcolati per mezzo di test fisico-chimici, mentre la qualità finale è stata determinato tramite analisi sensoristiche.<br>
 Gli attributi del dataset sono i seguenti:</p>
 
 </div>
@@ -13213,13 +13213,14 @@ Gli attributi del dataset sono i seguenti:</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><hr></p>
 <p><h3 align="center">Strumenti utilizzati per l'analisi</h3>
-L'intera analisi è stata condotta utilizzando il linguaggio <b>Python</b> e l'ambiente <b>Jupyter</b>, per via della sua naturale predisposizione alla stesura di report ed analisi.<br>
-Di seguito un elenco delle librerie utilizzate:</p>
+Gli strumenti e le librerie software utilizzate per redigere questa analisi sono:</p>
 <ul>
-    <li><b>pandas</b> (<a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>), libreria software per la manipolazione e l'analisi dei dati</li>
-    <li><b>numpy</b> (<a href="http://www.numpy.org/">http://www.numpy.org/</a>), estensione open source del linguaggio di programmazione Python, che aggiunge supporto per vettori e matrici multidimensionali e di grandi dimensioni e con funzioni matematiche di alto livello con cui operare</li>
-    <li><b>plotly</b> (<a href="https://plot.ly/feed/">https://plot.ly/feed/</a>), insieme di strumenti per l'analisi e la visualizzazione dei dati</li>
-    <li><b>sklearn</b> (<a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a>), libreria open source di apprendimento automatico per il linguaggio di programmazione Python</li>
+    <li><b>Python 3.7.2</b></li>
+    <li><b>Jupyter Notebook</b>, applicazione WEB per la creazione di documenti contenenti codice, testo e grafici</li>
+    <li><b>pandas</b> [<a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>], libreria software per la manipolazione e l'analisi dei dati</li>
+    <li><b>numpy</b> [<a href="http://www.numpy.org/">http://www.numpy.org/</a>], estensione open source del linguaggio di programmazione Python, che aggiunge supporto per vettori e matrici multidimensionali e di grandi dimensioni e con funzioni matematiche di alto livello con cui operare</li>
+    <li><b>plotly</b> [<a href="https://plot.ly/feed/">https://plot.ly/feed/</a>], insieme di strumenti per l'analisi e la visualizzazione dei dati</li>
+    <li><b>sklearn</b> [<a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a>], libreria open source di apprendimento automatico per il linguaggio di programmazione Python</li>
 </ul>
 </div>
 </div>
@@ -14327,7 +14328,8 @@ if (document.getElementById("a2ba6f05-6512-4af6-acfe-86de87bd2e96")) {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Costruire un modello utilizzando un unico set di training è un errore che va evitato, perchè esso apprenderà in maniera pressochè perfetta tutto ciò che riguarda tale set ma le sue prestazioni su nuovi dati potrebbero essere disastrose. Questa condizione è chiamata <b>overfitting</b> ed andrebbe evitata se si vuole costruire un buon classificatore. Per fare ciò si possono utilizzare diverse tecniche atte ad allenare il modello utilizzando diversi set di training, in modo tale che il modello non si "abitui" ad uno specifico set ma sia in grado di generalizzare il più possibile con lo scopo di classificare meglio i dati di test, quelli che non sono stati usati per l'apprendimento.<br>
+<p>Quando si costruisce un modello di classificazione si deve evitare che esso apprenda con estrema precisione il pattern seguito dai dati di training, altrimenti non sarà in grado di svolgere in maniera adeguata il suo compito quando gli saranno mostrati dati nuovi. La condizione per cui un classificatore abbia appreso troppo precisamente i dati di training è chiamata <b>overfitting</b> ed è nel nostro interesse combatterla.
+Per fare ciò si possono utilizzare diverse tecniche atte ad allenare il modello utilizzando diversi set di training, in modo tale che il modello non si "abitui" ad uno specifico set ma sia in grado di generalizzare il più possibile con lo scopo di classificare meglio i dati di test, quelli che non sono stati usati per l'apprendimento.<br>
 In questa analisi sarà utilizzata la tecnica di validazione incrociata chiamata <b>k-Fold</b> che svolge le seguenti operazioni:</p>
 <p><ul>
     <li>il dataset viene suddiviso in k diversi subset</li>
@@ -14432,8 +14434,8 @@ Sotto sono mostrati degli esempi di curve ROC in base al valore di AUC.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><i>Classificare</i> significa riconoscere e discriminare oggetti facenti parti di diverse categorie sulla base di informazioni che sono in nostro possesso. Lo scopo è quello di trovare dei pattern nei dati che siano tipici di ciscuna categoria del dataset. A differenza della regressione, che mira a trovare un output di tipo continuo, la classificazione tenta di etichettare ciascun oggetto utilizzando solamente valori discreti (ad esempio dato un cane determinare la sua razza di appartenenza; le razze sono categorie, non possono venire espresse per mezzo di valori continui).
-I modelli costruiti per classificare stanno vivendo un'epoca d'oro negli ultimi decenni, perchè sempre di più le decisioni importanti vengono prese sulla base della storia passata, su quanto le decisioni passate in una o nell'altra direzione hanno portato benefici o creato problemi.<br>
+<p><i>Classificare</i> significa riconoscere e discriminare oggetti facenti parti di diverse categorie sulla base di informazioni che sono in nostro possesso. Lo scopo è quello di trovare dei pattern nei dati che siano tipici di ciscuna categoria del dataset. A differenza della regressione, che mira a trovare un output di tipo continuo, la classificazione tenta di etichettare ciascun oggetto utilizzando solamente valori discreti (ad esempio dato un cane determinare la sua razza di appartenenza; le razze sono categorie, non avrebbe senso esprimerle per mezzo di valori continui).
+I modelli costruiti per classificare stanno vivendo un'epoca d'oro, perchè sempre di più le decisioni importanti vengono prese da macchine addestrate utilizzando informazioni prese dal contesto decisionale in esame.<br>
 Questo capitolo è dedicato interamente all'analisi del dataset utilizzando diversi algorimi di classificazione:<br></p>
 <p><ul>    
     <li><b>Classificatore Bayesiano</b></li>
@@ -14837,7 +14839,7 @@ Per ciascuno di essi sarà fornita un'adeguata spiegazione teorica al fine di me
 $$ \begin{align}\begin{aligned}P(y \mid x_1, \dots, x_n) \propto P(y) \prod_{i=1}^{n} P(x_i \mid y)\\\Downarrow\\\hat{y} = \arg\max_y P(y) \prod_{i=1}^{n} P(x_i \mid y),\end{aligned}\end{align} $$<p>dove $ y $ è l'output e $ x_1, ..., x_n $ sono le osservazioni. Questo algoritmo risulta semplice da implementare e comodo da utilizzare, perchè richiede pochi dati di training per funzionare in maniera discreta e non consuma troppe risorse computazionali.<br>
 I classificatori basati su questo algoritmo si differenziano in base alla probabilità (stimata a priori) che l'analista assegna ai dati di input.<br>
 Assumendo a priori che i dati siano distribuiti secondo una certa distribuzione, che è compito dell'analista individuare, si possono costruire modelli diversi.
-In questo caso assumiamo che i dati osservati siano distribuiti secondo una normale normalizzata, cioè di media $ \mu = 0 $ e varianza $ \sigma^2  = 1$ (assunzione possibile perchè i dati sono stati normalizzati in precedenza). In altre parole il termine dentro la produttoria sarà $$ P(x_i \mid y) = \frac{1}{\sqrt{2\pi\sigma^2_y}} \exp\left(-\frac{(x_i - \mu_y)^2}{2\sigma^2_y}\right) $$</p>
+In questo caso assumiamo che i dati osservati siano distribuiti secondo una normale, con media $ \mu = 0 $ e varianza $ \sigma^2  = 1$ (i dati erano stati normalizzati in precedenza). In altre parole il termine dentro la produttoria sarà $$ P(x_i \mid y) = \frac{1}{\sqrt{2\pi\sigma^2_y}} \exp\left(-\frac{(x_i - \mu_y)^2}{2\sigma^2_y}\right) $$</p>
 
 </div>
 </div>
@@ -15027,15 +15029,6 @@ Per scegliere il valore di k più adeguato è necessario valutare la tipologia e
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Sono sotto riportati gli andamenti di precisione, recall, F1-score e le curve ROC al variare di K.
-Le curve ROC in grigio rappresentano il calcolo fatto per ciascuno dei fold e per ogni valore di K, mentre in blu è rappresentata la curva che approssima tutte le altre.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p>I parametri su cui faremo tuning per questo algoritmo sono:</p>
 <ul>
     <li><i>n_neighbors</i>: numero di vicini da tenere in considerazione</li>
@@ -15195,7 +15188,7 @@ AUC del testing set: 0.769
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Gli score ottenuti ci mostrano come il modello sia andato in overfitting durante la fase di training, mostrando punteggi globali più bassi durante la fase di testing.<br>
-La matrice di confusione mostra un incremento nel numero di previsioni vere negative ma anche un incremento nel numero di previsioni false negative. Così come detto per il classificatore precedente, uno score di questo tipo potrebbe giovare ad aziende che hanno come obiettivo la qualità più che la quantità, ma potrebbe allo stesso tempo danneggiare le aziende che puntano sulla qualità.<br>
+La matrice di confusione mostra un incremento nel numero di previsioni vere negative ma anche un incremento nel numero di previsioni false positive. Così come detto per il classificatore precedente, uno score di questo tipo potrebbe giovare ad aziende che hanno come obiettivo la qualità più che la quantità, ma potrebbe allo stesso tempo danneggiare le aziende che puntano sulla qualità.<br>
 In definitiva <b>questo modello potrebbe non essere soddisfacente</b> in determinati contesti applicativi.</p>
 
 </div>
@@ -15212,8 +15205,7 @@ In definitiva <b>questo modello potrebbe non essere soddisfacente</b> in determi
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>L'SVM è un algoritmo supervisionato per classificare elementi appartenenti a due o più classi. L'obiettivo è quello di trovare l'iperpiano che sia in grado di separare i dati nel modo migliore. Questo significa assegnare, per ciascun punto, un etichetta in base a dove il punto si trovi rispetto all'iperpiano di separazione.
-Per trovare tale iperpiano abbiamo bisogno di risolvere un problema di ottimizzazione.</p>
+<p>L'SVM è un algoritmo supervisionato che si pone come obiettivo quello di trovare l'iperpiano che massimizzi la distanza tra le osservazioni di classi diverse. Il calcolo formulato in prima battuta non è banale, perchè presuppone la presenza del vettore $ \omega $ dei pesi e dunque di prodotti scalari. Come spiegato poco sotto è possibile ricondurre il problema originale ad un problema derivato eliminando la dipendenza dal vettore dei pesi.</p>
 <p><img src="img/svm_1.png" width="400"></p>
 
 </div>
@@ -15244,7 +15236,7 @@ Calcolando le derivate parziali della formulazione primale otteniamo la formulaz
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Formulando il problema in questo modo siamo in grado di calcolare la soluzione elimando la dipendenza dal vettore omega dei pesi e dal bias b. 
 L'unica dipendenza rimasta per la risoluzione è quella relativa ai coefficienti alfa.
-Questi coefficienti sono per lo più uguali a zero. Gli unici diversi da zero sono quelli relativi agli elementi presenti sui margini, che prendono il nome di <b>support vectors</b>, da cui il nome dell'algoritmo.</p>
+Essi sono per lo più uguali a zero, e gli unici diversi da zero sono quelli relativi agli elementi presenti sui margini, che prendono il nome di <b>support vectors</b>, da cui il nome dell'algoritmo.</p>
 
 </div>
 </div>
@@ -15279,7 +15271,7 @@ Indichiamo tale valore con <b>C</b>.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I parametri su cui faremo tuning per questo algoritmo sono:</p>
 <ul>
-    <li><i>C</i>: parametro C dell'SVM ({0.001, 0.01, 0.1, 1, 10, 1000, 10000})</li>
+    <li><i>C</i>: parametro C dell'SVM</li>
     <li><i>class_weight</i>: peso dato a ciascuna delle due classi, sulla base del numero di campioni che ne fanno parte</li>
 </ul>
 </div>
@@ -15434,7 +15426,7 @@ AUC del testing set: 0.916
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ciò che salta immediatamente all'occhio guardando la matrice di confusione è l'elevato valore di <b>veri positivi</b> che sono stati predetti nella fase di testing (<b>~89% delle previsioni</b>). Bisogna valutare se sia desiderabile o meno un valore di <b>falsi positivi che si attesti al 22%</b>. Ciò significa che per ogni 5 osservazioni di un vino di bassa qualità, una viene predetta come di alta qualità. Potrebbe in effetti essere un buon compromesso considerando il già indicato valori di veri positivi.<br>
-Considerando anche che il numero di <b>falsi negativi</b> registrato è <b>piuttosto basso (11.5%)</b> e che quello di <b>veri negativi</b> è <b>sufficientemente alto (78.4%)</b> possiamo dire che il modello trovato riesce a mediare piuttosto bene tutte le possibili situazioni. Ne è dimostrazione la curva ROC, la cui area sottesa raggiunge un valore del 91.6%.<br>
+Considerando anche che il numero di <b>falsi negativi</b> registrato è <b>piuttosto basso (11.5%)</b> e che quello di <b>veri negativi</b> è <b>sufficientemente alto (78.4%)</b> possiamo dire che il modello trovato riesce a mediare piuttosto bene tutte le possibili situazioni. Ne è dimostrazione la curva ROC, la cui area sottesa raggiunge il 91.6%.<br>
 Per quanto detto <b> il modello è soddisfacente</b>.</p>
 
 </div>
@@ -15460,18 +15452,10 @@ Uno dei kernel maggiormente utilizzati nell'ambito del SVM è il cosiddetto <b>R
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Questo tipo di kernel, come si può vedere dalla formula sopra, è formato da due diversi parametri su cui è necessario fare tuning: C e gamma.<br></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p>I parametri su cui faremo tuning per questo algoritmo sono:</p>
 <ul>
-    <li><i>C</i>: parametro C dell'SVM ({0.07,0.08,0.09,0.1,0.2,0.3,0.4})</li>
-    <li><i>Gamma</i>: parametro gamma dell'SVM ({0.1,0.2,0.3,0.4,0.5,0.6,0.65,0.7,0.75,0.8,0.9,1.0})</li>
+    <li><i>C</i>: parametro C dell'SVM</li>
+    <li><i>Gamma</i>: parametro gamma dell'SVM</li>
     <li><i>class_weight</i>: peso dato a ciascuna delle due classi, sulla base del numero di campioni che ne fanno parte</li>
 </ul>
 </div>
@@ -15626,7 +15610,7 @@ AUC del testing set: 0.920
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Il classificatore si comporta molto bene quando ha di fronte un vino di alta qualità, il quale viene classificato correttamente nella quasi totalità dei casi. In un contesto in cui ciò che conta è il vino di alta qualità un modello come questo sarebbe eccellente, perchè il modello riesce a rilevare quasi sempre l'alta qualità quando presente. Bisogna però valutare attentamente il caso contrario. Questo classificatore sbaglia quasi <b>3 volte su 10</b> la classificazione quando si trova a dover decidere l'etichetta da assegnare ad un vino di bassa qualità.
+<p>Il classificatore si comporta molto bene quando ha di fronte un vino di alta qualità, il quale viene classificato correttamente nella quasi totalità dei casi. In un contesto in cui ciò che conta è il vino di alta qualità un modello come questo sarebbe eccellente perchè riesce a rilevare quasi sempre l'alta qualità quando presente. Bisogna però valutare attentamente il caso contrario. Questo classificatore sbaglia quasi <b>3 volte su 10</b> la classificazione quando si trova a dover decidere l'etichetta da assegnare ad un vino di bassa qualità.
 Osservando però la curva ROC possiamo concludere l'elevata bontà del modello nel prendere le sue decisioni al variare della soglia decisionale.<br>
 In generale <b>il modello è soddisfacente</b>.</p>
 
@@ -15644,8 +15628,8 @@ In generale <b>il modello è soddisfacente</b>.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Nonostante il nome possa far pensare ad un algoritmo di regressione, la regressione logistica è un metodo utilizzato per la classificazione, e deve la sua somiglianza lessicale con la regressione lineare ad una connessione storica con quella lineare.<br>
-La regressione logistica si pone 
+<p>Nonostante il nome possa far pensare ad un algoritmo di regressione, la regressione logistica è un metodo utilizzato per la classificazione e deve il nome ad una connessione storica con la regressione lineare.<br>
+L'equazione seguente è quella utilizzata per valutare i valori di input (i concetti teorici sono spiegati poco sotto) e prende il nome di <b>Sigmoid function</b>.
 $$ h_ \theta (x) =  \frac{\mathrm{1} }{\mathrm{1} + e^- \theta^Tx },\ \theta= [b, \omega_1, \omega_2, \cdots \omega_d]$$ 
 <img src="img/Logistic_curve.svg" width="600"></p>
 
@@ -15685,17 +15669,25 @@ $$ log L(\theta) = \sum_i{y_i  log(1 - h(X_i;\theta)) + (1 - y_i)log(h(X_i;\thet
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>L'obiettivo è trovare il valore di $\theta$ (l'iperpiano) per il quale la log-likelihood è massima rispetto a tutti gli altri iperpiani. Per fare ciò siamo soliti calcolare la derivata della quantità e poi porla uguale a zero. In questo caso non è possibile procedere così, perchè l'equazione è la somma di un numero arbitrario di termini e non ha una forma chiusa. Per trovare il massimo dell'equazione si utilizza la tecnica chiamata <b>gradient ascent</b> (che prende il nome di <i>gradient descent</i> quando si vuole risolvere un problema di minimizzazione). <br>
+<p>L'obiettivo è trovare il valore di $\theta$ (l'iperpiano) per il quale la log-likelihood è massima rispetto a tutti gli altri iperpiani. Per fare ciò siamo soliti calcolare la derivata della quantità e poi porla uguale a zero. In questo caso non è possibile procedere così perchè l'equazione è la somma di un numero arbitrario di termini e non ha una forma chiusa. Per trovare il massimo dell'equazione si utilizza la tecnica chiamata <b>gradient ascent</b> (che prende il nome di <i>gradient descent</i> quando si vuole risolvere un problema di minimizzazione). <br>
 Essa consiste nell'aggiornare il valore di $\theta$ ad ogni iterazione, aggiungendo ad essa la derivata della funzione calcolata nel punto $\theta$. In questo modo si cerca di raggiungere il punto massimo della funzione per step successivi, senza passare dalla risoluzione analitica, che come abbiamo visto non è possibile fare.<br>
 Questo aggiornamento si può scrivere matematicamente come
 $$ \theta^{(t)} \rightarrow \theta^{(t-1)} + \eta f'(\theta) |_{\theta\ =\ \theta^{(t-1)}} $$
 dove $\eta$ è un termine di regolazione chiamato <b>learning rate</b> e serve a quantificare la dimensione dello spostamento lungo la curva.<br><br>
-Applicando il concetto di gradient ascent appena visto alla regressione logistica otteniamo
+Applicando il concetto di gradient ascent alla regressione logistica otteniamo
 $$ \theta^{(t)} \rightarrow \theta^{(t-1)} + \eta \nabla log L(\theta) |_{\theta\ =\ \theta^{(t-1)}} $$
 <br>
 Una volta calcolati il vettore dei pesi $ \omega $ ed il bias, per classificare una nuova osservazione non dobbiamo fare altro che calcolare l'output della funzione sigmoide quando l'input è il valore delle feature dell'osservazione moltiplicata scalarmente con il vettore dei pesi. Un output sopra la soglia dello <b>0.5</b> classificherà l'osservazione con l'etichetta <b>1</b>, mentre uno sotto tale soglia sarà classificato con etichetta <b>0</b>. Il valore 0.5 si riferisce, come detto, ad una probabilità maggiore o minore il 50% che l'osservazione faccia parte della classe positiva.</p>
-<p>L'ultimo concetto teorico che è bene citare riguarda la <b>regolarizzazione</b>. Utilizzando la procedura appena trattata c'è il rischio che il vettore $\omega$ dei pesi diventi estremamente grande, e questo porterebbe ad una situazione di overfitting in quanto la funzione sigmoide restituirebbe valori di output il più delle volte uguali a 0 od 1, e questa non è una situazione desiderabile. Per porre rimedio al problema è possibile <i>penalizzare</i> il modello ogni volta che sbaglia in modo da, appunto, regolarizzare il processo di apprendimento. Durante l'analisi con regressione logistica useremo sia la penalizzazione basata su norma L2 (chiamata <b>ridge</b>) che quella su norma L1 (anche detta <b>lasso</b>).</p>
+<p>L'ultimo concetto teorico che è bene citare riguarda la <b>regolarizzazione</b>. Utilizzando la procedura appena trattata c'è il rischio che il vettore $\omega$ dei pesi diventi estremamente grande, e questo porterebbe ad una situazione di overfitting, in quanto la funzione sigmoide restituirebbe valori di output il più delle volte uguali a 0 od 1, e questa non è una situazione desiderabile. Per porre rimedio al problema è possibile <i>penalizzare</i> il modello ogni volta che sbaglia in modo da, appunto, regolarizzare il processo di apprendimento. Durante l'analisi con regressione logistica useremo sia la penalizzazione basata su norma L2 (chiamata <b>ridge</b>) che quella su norma L1 (anche detta <b>lasso</b>).</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><hr></p>
+<h4 align="center">Analisi dei dati usando la regressione logistica</h4>
 </div>
 </div>
 </div>
@@ -15708,14 +15700,6 @@ Una volta calcolati il vettore dei pesi $ \omega $ ed il bias, per classificare 
     <li><i>tol</i>: tolleranza per determinare quando l'algoritmo debba interrompersi</li>
     <li><i>class_weight</i>: peso dato a ciascuna delle due classi, sulla base del numero di campioni che ne fanno parte</li>
 </ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><hr></p>
-<h4 align="center">Analisi dei dati usando la regressione logistica</h4>
 </div>
 </div>
 </div>
@@ -15885,18 +15869,19 @@ Per tale motivo concludiamo che <b>il modello è soddisfacente</b>.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Gli alberi di decisione sono algoritmi supervisionati e non parametrici usati sia per la regressione che per la classificazione. L'obiettivo è quello di creare un modello che sia in grado di assegnare le etichette ai dati sulla base di una regola di decisione dedotta dalle caratteristiche dei dati di training. Tra i vantaggi nell'utilizzo degli alberi di decisione troviamo:</p>
-<ul>
+<p><ul>
     <li>Sono molto semplici da visualizzare e da spiegare, anche a persone che non sono del mestiere</li>
     <li>Con gli alberi è possibile trattare dati categorici senza la necessità di creare variabili dummy.</li>
     <li>Richiedono una poco esosa preparazione dei dati</li>
 </ul>
-Essi portano con sè anche alcuni svantaggi:
-<ul>
+Essi portano con sè anche alcuni svantaggi:</p>
+<p><ul>
     <li>In genere gli alberi di decisione non forniscono un'accuratezza elevata come altri algoritmi classificativi.</li>
-    <li>Gli alberi tendono ad essere poco robusti: un piccolo cambiamento nei dati può comportare un enorme modificazione dell'albero.</li>
+    <li>Gli alberi tendono ad essere poco robusti: un piccolo cambiamento nei dati può comportare un enorme variazione dell'albero.</li>
     <li>I modelli basati su alberi di decisione tendono a fornire una non-buona generalizzazione dei dati, ossia vanno in overfitting.</li>
     <li>In presenza di dataset troppo sbilanciati verso una determinata classe il modello potrebbe risultare molto affetto da bias.</li>
-</ul><p>In questo paragrafo sarà costruito un modello basato su un albero decisione semplice, non utilizzando dunque alcuna tecnica di aggregazione degli alberi come per esempio il <b>Random Forest</b>, che sarà utilizzato nel prossimo paragrafo.</p>
+&lt;/ul</p>
+<p>In questo paragrafo sarà costruito un modello basato su un albero di decisione semplice mentre nel prossimo capitolo costruiremo un modello che utilizza metodi di aggregazione.</p>
 
 </div>
 </div>
@@ -16130,7 +16115,7 @@ AUC del testing set: 0.772
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La tabella qui sopra riporta l'importanza di ciascuna delle feature nel processo di costruzione degli alberi che costituiscono il modello dell'albero di decisione. La feature <b>alcool</b> è chiaramente quella dominante e quella che ha determinato la costruzione di questo modello, mentre tutte le altre hanno assunto un'importanza da due a tre volte minore. <br></p>
+<p>La tabella qui sopra riporta l'importanza di ciascuna delle feature nel processo di costruzione degli alberi che costituiscono il modello dell'albero di decisione. La feature <b>alcool</b> è chiaramente quella dominante che ha determinato la costruzione di questo modello, mentre tutte le altre hanno assunto un'importanza da due a tre volte minore. <br></p>
 
 </div>
 </div>
@@ -16155,7 +16140,7 @@ dove $ w_j $ è il numero di sample al nodo $ j $, $ C_j $ è l'impurità a ques
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>I risultati ottenuti sono simili a quelli visti con il modello basato su KNN. Il numero di falsi negativi è piuttosto alto, a fronte di un elevato valore di veri negativi. In generale però il modello non pare essere in grado di svolgere un buon lavoro al variare delle soglie decisionali, come evidenziato dalla curva ROC.<br>
+<p>I risultati ottenuti sono simili a quelli visti con il modello basato su KNN. Il numero di falsi negativi è piuttosto alto a fronte di un elevato valore di veri negativi. In generale però il modello non pare essere in grado di svolgere un buon lavoro al variare delle soglie decisionali, come evidenziato dalla curva ROC.<br>
 Concludiamo quindi che <b>questo modello potrebbe non essere soddisfacente</b> in determinati contesti applicativi.</p>
 
 </div>
@@ -16424,7 +16409,7 @@ AUC del testing set: 0.960
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>La caratteristica più importante è stata quella che descrive il tasso di <b>alcool</b>, mentre quella che meno importante è stata quella associata al <b>diossido di solfuro libero</b>. Notiamo come la feature alcool sia la più importante sia in questo caso che in quello dell'albero di decisione, anche se in quest'ultimo essa aveva assunto una più marcata importanza. In questo caso invece l'importanza sembra essersi distribuita lungo tutte le feature, come lecito aspettarsi da un modello basato sulla selezione random delle feature.</p>
+<p>La caratteristica più importante è stata quella che descrive il tasso di <b>alcool</b>, mentre quella meno importante è stata quella associata al <b>diossido di solfuro libero</b>. Notiamo come la feature alcool sia la più importante sia in questo caso che in quello dell'albero di decisione, anche se in quest'ultimo essa aveva assunto una più marcata importanza. In questo caso invece l'importanza sembra essersi distribuita lungo tutte le feature, come lecito aspettarsi da un modello basato sulla selezione random delle feature.</p>
 
 </div>
 </div>
@@ -16441,7 +16426,7 @@ AUC del testing set: 0.960
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>La tonalità rosso scuro del settore delle previsioni vere negative ci dice chiaramente come questo modello rasenti la perfezione nel classificare i vini di bassa qualità, il che lo rende il modello quasi-ideale in un contesto in cui i falsi negativi contano. Non dobbiamo farci ingannare dall'elevato valore di <i>falsi positivi</i> della matrice di confusione: essa indica gli score relativi ad una specifica soglia decisionale. Dobbiamo invece considerare la curva ROC del modello, che mostra valori molto elevati sia sul training set che sul testing set.<br>
-Detto questo concludiamo che <b>il modello è estremamente soddisfacente</b>, che si attesta come il migliore trovato nel contesto di questa analisi.</p>
+Detto questo concludiamo che <b>il modello è estremamente soddisfacente</b>, attestandosi come il migliore trovato in questa analisi.</p>
 
 </div>
 </div>
